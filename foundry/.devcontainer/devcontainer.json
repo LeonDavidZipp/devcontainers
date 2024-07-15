@@ -1,0 +1,49 @@
+{
+    "name": "AddressTrackerBackend",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached"
+    ],
+    "forwardPorts": [8080],
+    "customizations": {
+        "settings": {
+            "go.gopath": "/go",
+            "go.toolsGopath": "/go",
+            "go.useLanguageServer": true,
+            "renderWhitespace": "all",
+            "editor.formatOnSave": true,
+            "insertFinalNewline": true,
+            "files.trimTrailingWhitespace": true,
+            "files.autoSave": "afterDelay",
+            "files.autoSaveDelay": 1000,
+            "editor.insertSpaces": true,
+            "editor.tabSize": 4
+        },
+        "vscode": {
+            "extensions": [
+                // general
+                "Github.copilot",
+                "usernamehw.errorlens",
+
+                // go
+                "golang.go",
+                "joaoacdias.golang-tdd",
+
+                // rust
+                "1yib.rust-bundle",
+                "rust-lang.rust-analyzer",
+                "usernamehw.errorlens",
+                "tamasfe.even-better-toml",
+                "serayuzgur.crates",
+
+                // solidity
+                "juanblanco.solidity"
+            ]
+        }
+    },
+    "postCreateCommand": "echo 'Post create command executed in the container.'"
+}
