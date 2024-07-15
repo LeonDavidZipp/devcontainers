@@ -29,19 +29,10 @@
                 "Github.copilot",
                 "usernamehw.errorlens",
 
-                // go
-                "golang.go",
-                "joaoacdias.golang-tdd",
-
-                // rust
-                "1yib.rust-bundle",
-                "rust-lang.rust-analyzer",
-                "usernamehw.errorlens",
-                "tamasfe.even-better-toml",
-                "serayuzgur.crates",
-
                 // solidity
-                "juanblanco.solidity"
+                "juanblanco.solidity",
+                "maxdavidwow.remix-light",
+                "rmcmk.forge-format-vsc"
             ]
         }
     },
